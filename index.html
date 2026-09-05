@@ -508,30 +508,52 @@
       }
     }
 
+    /* ILUSTRACIÓN DEL POLLITO */
     function dibujarPajarito(x, y) {
       ctx.save();
       ctx.translate(x, y);
 
       const yellowColor = '#ffd534';
+      const yellowLight = '#ffe680';
       const orangeColor = '#ff8c1a';
       const blackColor = '#000000';
 
+      // Plumas de la cabeza
       ctx.fillStyle = yellowColor;
       ctx.beginPath();
-      ctx.arc(0, 0, 28, 0, Math.PI * 2);
-      ctx.arc(-8, -24, 11, 0, Math.PI * 2);
-      ctx.arc(7, -22, 10, 0, Math.PI * 2);
+      ctx.ellipse(-4, -30, 4, 10, -Math.PI / 6, 0, Math.PI * 2);
+      ctx.ellipse(3, -31, 3.5, 9, Math.PI / 8, 0, Math.PI * 2);
       ctx.fill();
 
-      ctx.fillStyle = orangeColor;
+      // Cuerpo
       ctx.beginPath();
-      ctx.ellipse(0, 6, 10, 6, 0, 0, Math.PI * 2);
+      ctx.ellipse(0, -2, 26, 28, 0, 0, Math.PI * 2);
       ctx.fill();
 
+      // Pechuga
+      ctx.fillStyle = yellowLight;
+      ctx.beginPath();
+      ctx.ellipse(8, 4, 15, 18, -Math.PI / 12, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Ojo
       ctx.fillStyle = blackColor;
       ctx.beginPath();
-      ctx.arc(-14, 2, 3.8, 0, Math.PI * 2);
-      ctx.arc(14, 2, 3.8, 0, Math.PI * 2);
+      ctx.arc(10, -8, 6, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.fillStyle = '#ffffff';
+      ctx.beginPath();
+      ctx.arc(12, -10, 2.2, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Pico
+      ctx.fillStyle = orangeColor;
+      ctx.beginPath();
+      ctx.moveTo(18, -4);
+      ctx.lineTo(28, 0);
+      ctx.lineTo(17, 5);
+      ctx.closePath();
       ctx.fill();
 
       ctx.restore();
