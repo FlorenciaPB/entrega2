@@ -1,4 +1,4 @@
-# entrega2
+
 📌 Descripción del Proyecto
 
 Este proyecto consiste en el desarrollo de una experiencia educativa lúdica e interactiva para la web en la que el sonido actúa como el pilar central de la interacción. A través de un juego de asociación sonoro-visual, la interfaz desafía al usuario a identificar estímulos auditivos previamente editados y optimizados.
